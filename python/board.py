@@ -75,6 +75,7 @@ class Chessboard(object):
             self._change_col(col, unsafe=False)
             self._change_diag(row, col, unsafe=False)
             self.board[row][col] = 0
+            self.num_queens -= 1
             return
         raise QueenNotFoundException('Queen not found')
 
